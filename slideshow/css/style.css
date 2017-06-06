@@ -1,0 +1,234 @@
+/* Fonts */
+@font-face {
+    font-family: 'nexa_boldregular';
+    src: url('nexa_bold-webfont.woff2') format('woff2'),
+         url('nexa_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: black;
+}
+ul {
+	list-style: none;
+}
+body {
+	font-family: 'Roboto Mono', monospace;
+}
+#home, #products {
+	background-color: #DADFE1;
+}
+#about {
+	background-color: #0b2eff;
+}
+img {
+	max-width: 75%;
+	margin: 0 auto;
+}
+.about-container {
+	display: flex;
+	margin-top: 40px;
+	margin-left: 50px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #fff;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.parent {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 1000px;
+	margin: 0 auto;
+}
+.container {
+	flex: 0 0 300px; 
+	position: relative;
+	margin-bottom: 40px;
+}
+.container img {
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+.about-item p:nth-child(1):first-letter {
+    font-family: 'nexa_boldregular';
+	font-size: 3em;
+	line-height: 0;
+}
+.about-item {
+	flex: 1;
+}
+#about-top {
+	margin-top: 57px;
+}
+.about-item p {
+	color: #fff;
+}
+.about-item img:hover  {
+	box-shadow: 9px -11px #DB0A5B;
+}
+.headline a{
+	font-family: 'nexa_boldregular';
+	font-size: 80px;
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	margin: 0;
+	right: 25px;
+	z-index: 1;
+}
+.headline:hover {
+	 text-shadow: 2px 2px #000;
+}
+.nav {
+	position: fixed;
+	right: 7px;
+	bottom: 120px;
+}
+.nav-item {
+	writing-mode: vertical-rl;
+	font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+.nav-item a:hover {
+	color: #e9c1e5;
+}
+.slideshow {
+	margin: 0 auto;
+	margin-top: 70px;
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 55%;
+	width: auto;
+	padding: 30px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+.prev {
+	background-image: url(../img/left.svg);
+	background-repeat: no-repeat;
+	left: 53px;
+}
+.prev:hover {
+	background-image: url(../img/leftblack.svg);
+}
+.next {
+	background-image: url(../img/right.svg);
+	background-repeat: no-repeat;
+	right: 53px;
+
+}
+.next:hover {
+	background-image: url(../img/rightblack.svg);
+}
+.video-container video {
+	width: 100%;
+}
+.modalDialog {
+	position: fixed;
+	font-family: 'Roboto Mono', monospace;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(11,46,255,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog h2 {
+	 font-family: 'nexa_boldregular';
+	 color: #000;
+	 font-size: 50px;
+	 margin: 0;
+	 text-align: center;
+}
+.modalDialog p {
+	text-align: center;
+}
+.price {
+	margin: 0;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 600px;
+	position: relative;
+	margin: 4% auto;
+	padding: 5px 20px 13px 20px;
+	background-color: #fff;
+}
+.close {
+	color: #0b2eff;
+	font-size: 40px;
+	line-height: 25px;
+	position: absolute;
+	right: 20px;
+	text-align: center;
+	top: 6px;
+	text-decoration: none;
+}
+
+.close:hover { 
+	color: #e9c1e5;
+}
+
+
+
+
+
+

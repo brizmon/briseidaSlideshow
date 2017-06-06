@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+	<title>frank</title>
+</head>
+<body id="home">
+<main>
+	<header>
+		<h1 class="headline"><a href="index.html">frank</a></h1>
+		<h2 class="view-item"></h2>
+		<nav>
+			<ul class="nav">
+				<li class="nav-item"><a href="index.html">Home</a></li>
+				<li class="nav-item"><a href="about.html">About</a></li>
+				<li class="nav-item"><a href="products.html">Products</a></li>
+				<li class="nav-item"><a href="video.html">Video</a></li>
+				<li class="nav-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li class="nav-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="slideshow">
+		<img class="slide" src="img/01.png" alt="">
+		<img class="slide" src="img/02.png" alt="">
+		<img class="slide" src="img/03.png" alt="">
+		<img class="slide" src="img/04.png" alt="">
+		<img class="slide" src="img/05.png" alt="">
+		<img class="slide" src="img/06.png" alt="">
+		<a class="prev" onclick="plusDivs (-1)"></a>
+		<a class="next" onclick="plusDivs (+1)"></a>
+	</div>
+</main>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n)
+    }
+
+    function showDivs(n) {
+        var i = 0;
+        var x = document.getElementsByClassName("slide");
+        if (n > x.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        while(i < x.length) {
+            x[i].style.display = "none";
+            i++;
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
+</body>
+</html>
